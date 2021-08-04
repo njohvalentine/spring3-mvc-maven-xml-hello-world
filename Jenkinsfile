@@ -6,7 +6,7 @@ pipeline {
         // Note: this should match with the tool name configured in your jenkins instance (JENKINS_URL/configureTools/)
         maven "Maven3"
     }
-    environment {
+    /*environment {
         // This can be nexus3 or nexus2
         NEXUS_VERSION = "nexus3"
         // This can be http or https
@@ -17,7 +17,7 @@ pipeline {
         NEXUS_REPOSITORY = "dvs-evn-spring"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "nexus_credentials"
-    }
+    }*/
     stages {
         stage("clone code") {
             steps {
@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         }
-        stage("mvn build") {
+        /*stage("mvn build") {
             steps {
                 script {
                     // If you are using Windows then you should use "bat" step
@@ -79,4 +79,4 @@ pipeline {
             }
         }
     }
-}
+}*/
